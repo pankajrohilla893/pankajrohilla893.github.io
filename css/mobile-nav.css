@@ -1,0 +1,78 @@
+/* Mobile navigation controls and dropdown */
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  background: var(--surface);
+  font: inherit;
+  font-size: .82rem;
+  cursor: pointer;
+}
+
+.menu-toggle-icon,
+.menu-toggle-icon::before,
+.menu-toggle-icon::after {
+  display: block;
+  width: 17px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform .2s ease, top .2s ease;
+}
+
+.menu-toggle-icon {
+  position: relative;
+}
+
+.menu-toggle-icon::before,
+.menu-toggle-icon::after {
+  position: absolute;
+  left: 0;
+  content: "";
+}
+
+.menu-toggle-icon::before { top: -5px; }
+.menu-toggle-icon::after { top: 5px; }
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon { background: transparent; }
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon::before { top: 0; transform: rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon::after { top: 0; transform: rotate(-45deg); }
+
+@media (max-width: 680px) {
+  .nav { position: relative; flex-wrap: wrap; gap: 10px; padding-block: 11px; }
+  .menu-toggle { display: inline-flex; order: 3; }
+  .nav-cta { order: 2; margin-left: auto; }
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    z-index: 25;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    border-radius: 0 0 10px 10px;
+    background: #171b28;
+    box-shadow: 0 18px 34px rgba(0, 0, 0, .28);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { padding: 12px 4px; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .nav-links a:last-child { border-bottom: 0; }
+}
+
+@media (min-width: 681px) {
+  .menu-toggle { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle-icon, .menu-toggle-icon::before, .menu-toggle-icon::after { transition: none; }
+}
