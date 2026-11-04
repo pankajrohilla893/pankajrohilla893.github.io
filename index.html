@@ -1,12 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-    <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pankaj Rohilla's portfolio, projects, and contact information.">
+  <title>Pankaj Rohilla | Portfolio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #0b1020;
+      --surface: #141d32;
+      --text: #edf2ff;
+      --muted: #a7b2c9;
+      --accent: #73e0c1;
+      --border: #29334a;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font: 16px/1.6 system-ui, sans-serif;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .container { width: min(1050px, calc(100% - 40px)); margin: auto; }
+    header, footer { border-color: var(--border); border-style: solid; }
+    header { border-width: 0 0 1px; }
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 750; text-decoration: none; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .nav-links a { color: var(--muted); text-decoration: none; }
+    .nav-links a:hover, .project-link:hover { color: var(--accent); }
+    .hero { padding: clamp(75px, 13vw, 140px) 0; }
+    .eyebrow { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+    h1 { max-width: 750px; margin: 12px 0; font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1.05; }
+    .hero p, .about { max-width: 650px; color: var(--muted); font-size: 1.1rem; }
+    section { padding: 55px 0; border-top: 1px solid var(--border); }
+    h2 { margin: 0 0 22px; font-size: 2rem; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 650;
+    }
+    .button.primary { color: #071511; background: var(--accent); border-color: var(--accent); }
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+    .card h3 { margin-top: 0; }
+    .card p { color: var(--muted); }
+    .project-link { color: var(--accent); font-weight: 650; text-decoration: none; }
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+    .skills li { padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
+    .contact { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+    footer { padding: 24px 0; border-width: 1px 0 0; color: var(--muted); }
+
+    @media (max-width: 700px) {
+      nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 15px 0; }
+      .nav-links { gap: 12px; }
+      .projects { grid-template-columns: 1fr; }
+      section { padding: 42px 0; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is my first github Pages site</p>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a class="brand" href="#home">Pankaj Rohilla</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home" style="border-top: 0">
+      <div class="eyebrow">Hello, I'm Pankaj</div>
+      <h1>I build thoughtful things for the web.</h1>
+      <p>Welcome to my portfolio. I enjoy learning, solving problems, and creating useful digital experiences.</p>
+      <div class="buttons">
+        <a class="button primary" href="#projects">See my projects</a>
+        <a class="button" href="#contact">Contact me</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <p class="about">Add a short introduction here: your background, what you enjoy doing, and what kinds of opportunities or collaborations you’re interested in.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>Describe what this project does and what you contributed.</p>
+          <a class="project-link" href="https://github.com/">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Add a brief description of another project you’re proud of.</p>
+          <a class="project-link" href="https://github.com/">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Highlight another project, contribution, or achievement.</p>
+          <a class="project-link" href="https://github.com/">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <p>Want to connect or discuss a project? Send me a message.</p>
+        <a class="button primary" href="mailto:your.email@example.com">Email me</a>
+        <a class="button" href="https://github.com/pankajrohilla893">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Pankaj Rohilla</div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
