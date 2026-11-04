@@ -1,155 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pankaj Rohilla's portfolio, projects, and contact information.">
-  <title>Pankaj Rohilla | Portfolio</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --background: #0b1020;
-      --surface: #141d32;
-      --text: #edf2ff;
-      --muted: #a7b2c9;
-      --accent: #73e0c1;
-      --border: #29334a;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pankaj Rohilla - iOS Developer portfolio and resume"
+    />
+    <title>Pankaj Rohilla | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Pankaj Rohilla</h1>
+        <div class="contact-row" aria-label="Contact details">
+          <span class="contact-item"><span class="dot"></span> Address: India, Bangalore</span>
+          <span class="contact-item"><span class="dot"></span> Phone number: +91-9739665283</span>
+          <span class="contact-item"><span class="dot"></span> Email address: pankaj.rohilla893@gmail.com</span>
+        </div>
+      </header>
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font: 16px/1.6 system-ui, sans-serif;
-    }
-    a { color: inherit; }
-    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-    .container { width: min(1050px, calc(100% - 40px)); margin: auto; }
-    header, footer { border-color: var(--border); border-style: solid; }
-    header { border-width: 0 0 1px; }
-    nav {
-      min-height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .brand { font-weight: 750; text-decoration: none; }
-    .nav-links { display: flex; flex-wrap: wrap; gap: 20px; }
-    .nav-links a { color: var(--muted); text-decoration: none; }
-    .nav-links a:hover, .project-link:hover { color: var(--accent); }
-    .hero { padding: clamp(75px, 13vw, 140px) 0; }
-    .eyebrow { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
-    h1 { max-width: 750px; margin: 12px 0; font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1.05; }
-    .hero p, .about { max-width: 650px; color: var(--muted); font-size: 1.1rem; }
-    section { padding: 55px 0; border-top: 1px solid var(--border); }
-    h2 { margin: 0 0 22px; font-size: 2rem; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
-    .button {
-      display: inline-block;
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 650;
-    }
-    .button.primary { color: #071511; background: var(--accent); border-color: var(--accent); }
-    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .card { padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
-    .card h3 { margin-top: 0; }
-    .card p { color: var(--muted); }
-    .project-link { color: var(--accent); font-weight: 650; text-decoration: none; }
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
-    .skills li { padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
-    .contact { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
-    footer { padding: 24px 0; border-width: 1px 0 0; color: var(--muted); }
+      <section class="section">
+        <div class="section-head">
+          <span class="section-icon">◔</span>
+          <h2>Profile</h2>
+        </div>
+        <p class="profile-text">
+          Results-driven iOS Developer with 9+ years of experience building robust,
+          high-performance applications in the finance and health care domain.
+          Passionate about innovation, continuous learning, and taking full ownership of
+          products end-to-end — from analysis and design to deployment and support. Highly
+          skilled in Swift, Flutter, Xcode, and iOS, with growing experience in Python,
+          and a strong focus on delivering impactful, business-driven solutions.
+        </p>
+      </section>
 
-    @media (max-width: 700px) {
-      nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 15px 0; }
-      .nav-links { gap: 12px; }
-      .projects { grid-template-columns: 1fr; }
-      section { padding: 42px 0; }
-    }
-  </style>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <nav class="container" aria-label="Main navigation">
-      <a class="brand" href="#home">Pankaj Rohilla</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+      <section class="section">
+        <div class="section-head">
+          <span class="section-icon">◌</span>
+          <h2>Education</h2>
+        </div>
 
-  <main class="container">
-    <section class="hero" id="home" style="border-top: 0">
-      <div class="eyebrow">Hello, I'm Pankaj</div>
-      <h1>I build thoughtful things for the web.</h1>
-      <p>Welcome to my portfolio. I enjoy learning, solving problems, and creating useful digital experiences.</p>
-      <div class="buttons">
-        <a class="button primary" href="#projects">See my projects</a>
-        <a class="button" href="#contact">Contact me</a>
-      </div>
-    </section>
+        <div class="entry">
+          <div class="date">06/2011 – 05/2015<br>Staffordshire University,<br>England</div>
+          <div>
+            <div class="company"><span class="line">B.E | Bachelor of Engineering</span></div>
+            <div class="company-small">Asia Pacific Institute of Information &amp; Technology</div>
+            <div class="company-small">Staffordshire University – Marks 82%, Division I</div>
+          </div>
+        </div>
+      </section>
 
-    <section id="about">
-      <h2>About me</h2>
-      <p class="about">Add a short introduction here: your background, what you enjoy doing, and what kinds of opportunities or collaborations you’re interested in.</p>
-    </section>
+      <section class="section">
+        <div class="section-head">
+          <span class="section-icon">◍</span>
+          <h2>Work Experience</h2>
+        </div>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>Describe what this project does and what you contributed.</p>
-          <a class="project-link" href="https://github.com/">View project →</a>
-        </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Add a brief description of another project you’re proud of.</p>
-          <a class="project-link" href="https://github.com/">View project →</a>
-        </article>
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>Highlight another project, contribution, or achievement.</p>
-          <a class="project-link" href="https://github.com/">View project →</a>
-        </article>
-      </div>
-    </section>
+        <div class="entry">
+          <div class="date">05/2016 – 12/2018<br>Bangalore, India</div>
+          <div>
+            <div class="company">iOS Developer</div>
+            <div class="company-small">Thomson Reuters</div>
+            <ul class="bullets">
+              <li>Developed and supported enterprise-grade trading mobile applications.</li>
+              <li>Built high-quality, testable iOS components using Swift with an emphasis on long-term scalability.</li>
+              <li>Increased app stability by systematically diagnosing production issues and optimizing critical code paths.</li>
+            </ul>
+          </div>
+        </div>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git &amp; GitHub</li>
-      </ul>
-    </section>
+        <div class="entry">
+          <div class="date">01/2019 – 01/2020<br>Remote, Australia</div>
+          <div>
+            <div class="company">iOS Developer</div>
+            <div class="company-small">Health Care Innovate (Clinivid)</div>
+            <ul class="bullets">
+              <li>Led complete development lifecycle and resolved critical production issues.</li>
+              <li>Improved app stability by reducing crash rate by ~30% through memory optimization and systematic crash analysis.</li>
+              <li>Collaborated with cross-functional teams to deliver user-friendly solutions.</li>
+              <li>Enhanced user experience, contributing to a 25–35% increase in user engagement.</li>
+            </ul>
+          </div>
+        </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact">
-        <p>Want to connect or discuss a project? Send me a message.</p>
-        <a class="button primary" href="mailto:your.email@example.com">Email me</a>
-        <a class="button" href="https://github.com/pankajrohilla893">GitHub</a>
-      </div>
-    </section>
-  </main>
+        <div class="entry">
+          <div class="date">01/2020 – 02/2025<br>Remote, Australia</div>
+          <div>
+            <div class="company">Lead iOS Developer</div>
+            <div class="company-small">InfoMedix (Clinivid)</div>
+            <ul class="bullets">
+              <li>Owned end-to-end iOS architecture and delivery for applications.</li>
+              <li>Mentored developers, delegated components, and enforced coding standards and architectural best practices.</li>
+              <li>Accelerated release cycles by 20% through improved task prioritization and streamlined development workflows.</li>
+              <li>Successfully delivered 5+ releases with zero critical post-release issues.</li>
+            </ul>
+          </div>
+        </div>
 
-  <footer>
-    <div class="container">© <span id="year"></span> Pankaj Rohilla</div>
-  </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
+        <div class="entry">
+          <div class="date">04/2021 – 08/2025<br>Remote, Australia</div>
+          <div>
+            <div class="company">Lead iOS Developer</div>
+            <div class="company-small">KeyTrust</div>
+            <ul class="bullets">
+              <li>Mentored 4–6 junior iOS developers, improving code quality and reducing review rework by ~30%.</li>
+              <li>Continuous improvement, resulting in measurable gains in performance, usability, and App Store visibility.</li>
+              <li>Improved test coverage to 70%+, resulting in fewer production defects.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <span class="section-icon">◫</span>
+          <h2>Skills</h2>
+        </div>
+        <ul class="skills-list">
+          <li><strong>Languages:</strong> Swift, Flutter, Dart, Python (scripting and automation)</li>
+          <li><strong>Frameworks:</strong> UIKit, Core Data, Multithreading (GCD), Flutter-SDK, XCTest, XCUITest, Providers</li>
+          <li><strong>Software Architecture:</strong> MVC, MVVM, Clean Architecture, Modular App Architecture, SOLID Principles</li>
+          <li><strong>Mobile Engineering &amp; Tooling:</strong> Xcode, Instruments, TestFlight, CocoaPods, Swift Package Manager, CI/CD, Firebase Analytics, profiling</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <span class="section-icon">◧</span>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-entry">
+            <div class="date">05/2016 – 12/2018<br>Bangalore, India</div>
+            <div>
+              <div class="project-title"><span class="line">iOS Developer</span> NEST MOBILE</div>
+              <div class="tech">Technologies: Xcode, Swift, XC-Test, Mobile App Development</div>
+              <ul class="bullets">
+                <li>Developed and enhanced Nest Mobile App, a comprehensive iOS trading solution supporting members across multiple exchange venues.</li>
+                <li>Implemented features for real-time market data, order execution, and risk management with a strong focus on performance and reliability.</li>
+                <li>Optimized application performance and stability to support high-volume trading activities.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-entry">
+            <div class="date">01/2019 – 02/2025<br>Remote, Australia</div>
+            <div>
+              <div class="project-title"><span class="line">Lead iOS Developer</span> Clinivid</div>
+              <div class="tech">Technologies: Xcode, UI-Kit, Swift, XC-Test, Python, VS-Code</div>
+              <ul class="bullets">
+                <li>Developed Clinivid iOS application, enabling clinicians to improve healthcare communication using digital and video technologies.</li>
+                <li>Built intuitive iOS interfaces in Swift for seamless video and messaging, using Xcode, UIKit/SwiftUI, Core Data, and REST APIs.</li>
+                <li>Automated patient data extraction from EMR systems using Python scripts, streamlining workflows.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-entry">
+            <div class="date">01/2020 – 08/2025<br>Remote, Australia</div>
+            <div>
+              <div class="project-title"><span class="line">Lead iOS Developer</span> Family Share</div>
+              <div class="tech">Technologies: Xcode, Android Studio, Flutter, Dart, VS-Code</div>
+              <ul class="bullets">
+                <li>Developed Family-Share Flutter app to enhance quality of life for elderly users with cognitive challenges.</li>
+                <li>Created intuitive, accessible UI with Flutter, ensuring engagement across all cognitive levels.</li>
+                <li>Used Dart, Flutter DevTools, Firebase, and state management frameworks (Provider) to deliver a scalable and maintainable solution.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <span class="section-icon">✦</span>
+          <h2>Achievements</h2>
+        </div>
+        <ul class="skills-list">
+          <li>Reduced app crash rate by 40% through performance profiling, memory optimization, and crash analytics.</li>
+          <li>Successfully designed, developed, and released an iOS application from scratch within a record 3 months, meeting all quality and delivery milestones.</li>
+        </ul>
+      </section>
+    </div>
+  </body>
 </html>
